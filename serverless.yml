@@ -1,4 +1,4 @@
-service: notes-app-2-api
+service: notes-app-4-api
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
@@ -20,7 +20,8 @@ custom:
     includeModules: true
   # Load our secret environment variables based on the current stage.
   # Fallback to default if it is not in prod.
-  environment: ${file(env.yml):${self:custom.stage}, file(env.yml):default}
+  environment: 
+    region: us-east-1
 
 provider:
   name: aws
